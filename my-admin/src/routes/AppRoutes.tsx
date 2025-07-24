@@ -1,20 +1,22 @@
-import { BrowserRouter , Routes ,  Route, Navigate} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import AboutPage from "../pages/AboutPage";
+import ProfilePage from "../pages/ProfilePage";
+import EditProfile from "../pages/EditProfileInfo";
+// import CoursesPage from "../pages/CoursesPage"; // if needed
 
-// import React from 'react'
-
-const AppRoutes = () => {
+const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<Navigate to="/dashboard" replace />} />
-        <Route path="/dashboard" element={<div>Dashboard</div>} />
-        <Route path="/settings" element={<div>Settings</div>} />
-        <Route path="/profile" element={<div>Profile</div>} />
-        <Route path="*" element={<div>404 Not Found</div>} />
+        <Route path="/" element={<Navigate to="/institute/about" replace />} />
+        <Route path="/institute/about" element={<AboutPage />} />
+        <Route path="/institute/profile" element={<ProfilePage />} />
+        <Route path="/edit-institute" element={<EditProfile/>} />
+        {/* <Route path="/institute/courses" element={<CoursesPage />} /> */}
       </Routes>
-    </BrowserRouter>
+    </Router>
+  );
+};
 
-  )
-}
-
-export default AppRoutes
+export default App;
