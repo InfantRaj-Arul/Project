@@ -41,14 +41,14 @@ const AboutView: React.FC = () => {
             <div className="p-6 w-[705px] h-[242px] rounded-xl shadow-lg border border-white/20 flex flex-col md:flex-row items-start gap-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-md text-black mb-6">
                 <div className="flex flex-col items-center min-w-[170px]">
                     <img src={univerlogo} alt="Logo" className="w-29 h-29 object-contain" />
-                    <p className="mt-2 font-medium text-[#0B2447] text-center">
+                    <p className="mt-2 font-medium text-[#0B2447] text-center font-montserrat text-[14px]">
                         Bharathidasan University
                     </p>
                     <p className="text-sm text-gray-700 text-center">aureg@bdu.ac.in</p>
                 </div>
 
                 <div className="text-sm w-full text-left">
-                    <h2 className="flex text-[#0E2B56] items-center gap-2 text-base font-semibold mb-3">
+                    <h2 className="flex text-[#0E2B56] items-center gap-2 text-base font-semibold mb-3 font-montserrat">
                         Contact Details:
                     </h2>
                     <p className="flex items-center gap-2 mb-2 text-[#0E2B56]">

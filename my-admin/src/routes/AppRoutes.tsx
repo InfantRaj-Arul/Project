@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import AboutPage from "../pages/AboutPage";
 import ProfilePage from "../pages/ProfilePage";
 import EditProfile from "../pages/EditProfileInfo";
-// import CoursesPage from "../pages/CoursesPage"; // if needed
+import CoursesPage from "../components/CoursesView";
 
 const App: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const App: React.FC = () => {
         <Route path="/institute/about" element={<AboutPage />} />
         <Route path="/institute/profile" element={<ProfilePage />} />
         <Route path="/edit-institute" element={<EditProfile/>} />
-        {/* <Route path="/institute/courses" element={<CoursesPage />} /> */}
+        <Route path="/institute/courses" element={<CoursesPage />} />
       </Routes>
     </Router>
   );

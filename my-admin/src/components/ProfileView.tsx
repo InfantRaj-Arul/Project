@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import InstituteInfo from "./InstituteInfo";
 import LogoAndGallery from "./LogoAndGallery";
+import SocialMediaLinks from "./SocialMediaLinks";
+import Documents from "./Documents";
+import ChangePassword from "./ChangePassword";
+import ActivityLogs from "./ActivityLogs";
 
 const ProfileView: React.FC = () => {
     const [activeTab, setActiveTab] = useState("Personal Info");
@@ -17,6 +21,10 @@ const ProfileView: React.FC = () => {
             <div className="flex-1">
                 {activeTab === "Personal Info" && <InstituteInfo />}
                 {activeTab === "Profile" && <LogoAndGallery />}
+                {activeTab === "Social Media" && <SocialMediaLinks />}
+                {activeTab === "Documents" && <Documents />}
+                {activeTab === "Change Password" && <ChangePassword />}
+                {activeTab === "Institute Activity Logs" && <ActivityLogs />}
             </div>
         </div>
     );

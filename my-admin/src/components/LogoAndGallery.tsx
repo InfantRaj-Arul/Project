@@ -1,31 +1,46 @@
 import React from "react";
-import univerlogo from "../assets/About/univerlogo.png"
+import univerlogo from "../assets/About/univerlogo.png";
 
+import img1 from "../assets/About/galleryimg1.png";
+import img2 from "../assets/About/galleryimg2.png";
+import img3 from "../assets/About/galleryimg3.png";
+import img4 from "../assets/About/galleryimg1.png";
+
+const galleryImages = [img1, img2, img3, img4];
 
 const LogoAndGallery: React.FC = () => {
     return (
         <div className="flex flex-col md:flex-row gap-6">
             {/* Logo Card */}
-            <div className="pl-6 w-full md:w-1/3">
-                <h2 className="text-lg font-semibold mb-4 text-[#0E2B56] pb-2 ml-25">
+            <div className="pl-6 w-full md:w-1/3 ">
+                <h2 className="text-lg font-semibold mb-4 text-[#0E2B56] pb-2 ml-25 ">
                     Logo
                 </h2>
-                <div className="w-[190px] h-[190px] bg-white/20 rounded-md ml-25" >
-                <img
-            src={univerlogo}
-            alt="University Logo"
-            className="w-820 h-40 pt-4 object-contain"/>
-            </div>
+                <div className="w-[190px] h-[190px] bg-white/20  ml-25 border border-white/20 rounded-xl" >
+                    <img
+                        src={univerlogo}
+                        alt="University Logo"
+                        className="w-820 h-40 pt-4 object-contain" />
+                </div>
             </div>
 
             {/* Gallery Card */}
-            <div className="w-full md:w-[450px] ">
+            <div className="w-full md:w-[450px]">
                 <h2 className="text-lg font-semibold mb-4 text-[#0E2B56] pb-2">
                     Gallery
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
-                    {[1, 2, 3, 4].map((img, i) => (
-                        <div key={i} className="w-full h-36 bg-white/20 rounded-md" />
+                    {galleryImages.map((imgSrc, i) => (
+                        <div
+                            key={i}
+                            className="w-full h-36 bg-white/20 flex items-center justify-center overflow-hidden border border-white/20 rounded-xl"
+                        >
+                            <img
+                                src={imgSrc}
+                                alt={`Gallery ${i + 1}`}
+                                className="w-[180px] h-[110px] object-cover rounded-md"
+                            />
+                        </div>
                     ))}
                 </div>
             </div>

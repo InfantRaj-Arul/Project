@@ -30,7 +30,7 @@ const EditProfile: React.FC = () => {
               </div>
             ))}
 
-            {/* Full Width Description Box */}
+            {/* Description Box */}
             <div className="col-span-full flex flex-col">
               <label className="mb-1 text-sm text-[#0E2B56] font-medium">Description</label>
               <textarea

@@ -17,7 +17,7 @@ const InstituteInfo: React.FC = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-xl p-6 w-full">
+        <div className="bg-white/10 border border-white/20 backdrop-blur-md rounded-xl shadow-xl p-6 w-full">
             <h2 className="text-lg font-semibold mb-4 text-[#0E2B56] border-b border-[#354D7157] pb-2">
                 Institute Details
             </h2>
@@ -27,7 +27,7 @@ const InstituteInfo: React.FC = () => {
                     <div key={index} className="flex flex-col">
                         <label className="mb-1 text-sm text-[#0E2B56] font-medium">{field}</label>
                         <input
-                            className="w-full px-4 py-2 rounded-md bg-white/30 placeholder:text-[#0B2447] text-[#0B2447] focus:outline-none focus:ring-2 focus:ring-pink-500"
+                            className="w-full px-4 py-2 rounded-md bg-white/30 placeholder:text-[#0B2447] text-[#0B2447] focus:outline-none focus:ring-2 focus:border-[#0E2B56]"
                         />
                     </div>
                 ))}
