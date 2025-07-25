@@ -1,20 +1,29 @@
-import { BrowserRouter , Routes ,  Route, Navigate} from "react-router-dom";
-
-// import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "../layout/Navbar";
+import Maindash from "../pages/Maindash/Maindash";
+import Institute from "../pages/Institute/Institute";
+import Payment from "../pages/Payment/Payment";
+import Subscription from "../pages/Subscription/Subscription";
+import About from "../pages/About/About";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/dashboard" replace />} />
-        <Route path="/dashboard" element={<div>Dashboard</div>} />
-        <Route path="/settings" element={<div>Settings</div>} />
-        <Route path="/profile" element={<div>Profile</div>} />
-        <Route path="*" element={<div>404 Not Found</div>} />
+        <Route element={<MainLayout />}>
+          <Route path="/dashboard" element={<Maindash />} />
+          <Route path="/" element={<div className="pt-28"></div>} />
+          <Route path="/ins" element={<Institute />} />
+          <Route path="/pay" element={<Payment />} />
+          <Route path="/subs" element={<Subscription/>} />
+          <Route path="/dashboard" element={<About />} />
+          <Route path="/noti" element={<div>Notifications Page</div>} />
+          <Route path="/profile" element={<div>Profile Page</div>} />
+          <Route path="/abt" element={<About />} />
+        </Route>
       </Routes>
     </BrowserRouter>
+  );
+};
 
-  )
-}
-
-export default AppRoutes
+export default AppRoutes;
