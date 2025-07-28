@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "../layout/Navbar";
-import Maindash from "../pages/Maindash/Maindash";
+import Dashboard from "../pages/Maindash/Maindash"; // Assuming this is your dashboard component
 import Institute from "../pages/Institute/Institute";
 import Payment from "../pages/Payment/Payment";
 import Subscription from "../pages/Subscription/Subscription";
@@ -11,15 +11,14 @@ const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/dashboard" element={<Maindash />} />
-          <Route path="/" element={<div className="pt-28"></div>} />
+          <Route path="/" element={<Dashboard />} /> {/* Dashboard as home page */}
+          <Route path="/dashboard" element={<Dashboard />} /> {/* Also accessible via /dashboard */}
           <Route path="/ins" element={<Institute />} />
           <Route path="/pay" element={<Payment />} />
           <Route path="/subs" element={<Subscription/>} />
-          <Route path="/dashboard" element={<About />} />
+          <Route path="/abt" element={<About />} />
           <Route path="/noti" element={<div>Notifications Page</div>} />
           <Route path="/profile" element={<div>Profile Page</div>} />
-          <Route path="/abt" element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>
