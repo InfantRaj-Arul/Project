@@ -3,7 +3,7 @@ import MainLayout from "../layout/Navbar";
 import Dashboard from "../pages/Maindash/Maindash"; // Assuming this is your dashboard component
 import Institute from "../pages/Institute/Institute";
 import Payment from "../pages/Payment/Payment";
-import Subscription from "../pages/Subscription/Subscription";
+import Subscription from "../pages/Subscription/subscription";
 import About from "../pages/About/About";
 
 const AppRoutes = () => {
