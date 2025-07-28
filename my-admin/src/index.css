@@ -1,9 +1,28 @@
 @import "tailwindcss";
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 1918fa1b612cf3d89373446f25e93b1ecd1629f6
 @tailwind base;
 
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+=======
+body {
+  
+  background-image: url('./assets/Bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+
+>>>>>>> 1918fa1b612cf3d89373446f25e93b1ecd1629f6
 /* 
 
 :root {

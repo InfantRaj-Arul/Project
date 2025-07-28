@@ -1,6 +1,6 @@
 import React from "react";
 import viewIcon from "../Assets/viewIcon.png";
-import back2 from "../Assets/back2.png";
+
 
 const feesData = Array(6).fill({
   id: "#1",
@@ -14,7 +14,7 @@ const FeesTable: React.FC = () => {
   return (
     <div
       className="min-h-screen bg-cover bg-center flex items-center justify-center p-10"
-      // style={{ backgroundImage:` url(${back2}) `}}
+      
     >
       <div className="w-full max-w-6xl bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl text-white">
         <h2 className="text-2xl font-semibold text-[#0E2B56] text-left mb-6">Fees</h2>
