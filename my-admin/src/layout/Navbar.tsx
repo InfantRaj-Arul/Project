@@ -1,3 +1,4 @@
+// MainLayout.tsx
 "use client";
 
 import { Target, Bell } from "lucide-react";
@@ -15,7 +16,6 @@ interface NavIcon {
 const MainLayout: React.FC = () => {
   const location = useLocation();
 
-  // Navigation icons data with custom images
   const navIcons: NavIcon[] = [
     { src: "/icons/Group 163.png", alt: "Dashboard", id: "dashboard", path: "/dashboard" },
     { src: "/icons/insi.png", alt: "Users", id: "users", path: "/ins" },
@@ -27,8 +27,8 @@ const MainLayout: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full overflow-hidden">
-      {/* Fixed Navigation Bar */}
+    <>
+      {/* Navigation Bar */}
       <nav
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4"
         style={{
@@ -89,11 +89,11 @@ const MainLayout: React.FC = () => {
         </div>
       </nav>
 
-      {/* Main Content Area - Always show Outlet */}
+      {/* Main Content Area */}
       <div className="pt-28 pb-8 px-8 min-h-screen">
         <Outlet />
       </div>
-    </div>
+    </>
   );
 };
 

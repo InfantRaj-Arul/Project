@@ -243,9 +243,9 @@ const DashboardStats = () => {
   }
 
   return (
-    <div className="min-h-screen w-full overflow-hidden">
+    <div className="min-h-screen w-full ">
       {/* Main Content - Centered Container */}
-      <div className="fixed top-28 bottom-0 left-0 right-0 flex justify-center items-start overflow-hidden">
+      <div className="fixed top-28 bottom-0 left-0 right-0 flex justify-center items-start ">
         {/* Main Container */}
         <div
           className="relative rounded-xl border border-white/30"

@@ -6,7 +6,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body {
+  
+  background-image: url('./assets/Bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
 
 /* 
 

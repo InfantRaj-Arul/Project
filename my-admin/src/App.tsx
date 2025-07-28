@@ -1,26 +1,28 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css'
-import AppRoutes from './routes/AppRoutes'
+import './App.css';
+import AppRoutes from './routes/AppRoutes';
+import bg4 from './assets/Desktop - 74.png';
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-     <div className="background-image">
-        <img 
-          src="/Desktop - 74.png" 
-          alt="Background" 
-          className="bg-image"
-        />
+    <div className="relative min-h-screen w-full overflow-x-hidden">
+      {/* Fixed Background Image with reduced coverage */}
+      <div
+        className="fixed top-25 left-20 right-20 bottom-0 -z-10"  // Reduced from all sides
+        style={{
+          backgroundImage: `url(${bg4})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          borderRadius: '20px', // Optional: adds rounded corners
+        }}
+      />
+
+      {/* Main App Routes (Page Content) */}
+      <div className="relative z-10">
+        <AppRoutes />
       </div>
-<AppRoutes/>
-        </div>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
