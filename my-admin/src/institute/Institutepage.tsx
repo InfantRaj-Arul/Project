@@ -133,7 +133,7 @@ const Institutepage: React.FC = () => {
                   <div className="w-[368px] h-[86px] flex flex-col items-start gap-4">
                     {/* Title */}
                     <div className="w-[368px] h-[22px] flex flex-col justify-center items-start gap-4">
-                      <div className="text-[#0E2B56] font-montserrat font-semibold text-[18px] leading-[22px] tracking-[-0.02em]">
+                      <div className="text-[#0E2B56] font-montserrat font-semibold text-[16px] leading-[22px] tracking-[-0.02em]">
                         Subscription Plan
                       </div>
                     </div>
@@ -150,7 +150,7 @@ const Institutepage: React.FC = () => {
                   <div className="w-[368px] h-[86px] flex flex-col items-start gap-4">
                     {/* Title */}
                     <div className="w-[368px] h-[22px] flex flex-col justify-center items-start gap-4">
-                      <div className="text-[#0E2B56] font-montserrat font-semibold text-[18px] leading-[22px] tracking-[-0.02em]">
+                      <div className="text-[#0E2B56] font-montserrat font-semibold text-[16px] leading-[22px] tracking-[-0.02em]">
                         Status
                       </div>
                     </div>
@@ -167,7 +167,7 @@ const Institutepage: React.FC = () => {
                   <div className="w-[368px] h-[86px] flex flex-col items-start gap-4">
                     {/* Title */}
                     <div className="w-[368px] h-[22px] flex flex-col justify-center items-start gap-4">
-                      <div className="text-[#0E2B56] font-montserrat font-semibold text-[18px] leading-[22px] tracking-[-0.02em]">
+                      <div className="text-[#0E2B56] font-montserrat font-semibold text-[16px] leading-[22px] tracking-[-0.02em]">
                         Date
                       </div>
                     </div>
@@ -185,95 +185,20 @@ const Institutepage: React.FC = () => {
       )}
       {/* Show and Hide Filters Section ----------------------------> End */}
 
-
-{/* <div className="min-h-screen bg-gradient-to-br from-blue-300 to-blue-900 font-montserrat p-6 text-white">
-      {showModal && (
-        <div className="flex justify-center items-center h-full">
-          <button
-            onClick={() => setShowModal(true)}
-            className="bg-[#0E2B56] text-white px-4 py-2 rounded-lg min-h-[48px] min-w-[140px] text-[16px]"
-          >
-            <span className="flex items-center justify-center">
-              <img src={bicon1} alt="plus icon" className="mr-2 w-5 h-5" />
-              Add Salaries
-            </span>
-          </button>
-        </div>
-      )}
-    
-    </div>
-
-  return (
-    <div className="space-y-10">
-      {/* Step Progress Bar */}
-      {/* <div className="flex justify-between items-center bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 mb-10">
-        {["Personal Info", "Gallery Info", "Social Links", "Documents", "Account Details"].map((step, idx) => (
-          <div key={step} className="flex-1 text-center relative">
-            <div className={`mx-auto w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold ${idx === 0 ? 'bg-blue-900 text-white' : 'bg-blue-100 text-blue-800'}`}>
-              {idx + 1}
-            </div>
-            <p className="mt-2 text-sm">{step}</p>
-            {idx < 4 && <div className="absolute top-5 right-0 w-full h-px bg-blue-200 z-[-1]"></div>}
-          </div>
-        ))}
-      </div>
-
-    //   {/* Form Section */}
-    {/* //   <div className="space-y-10"> */}
-        {/* Institute Details */}
-    {/* //     <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20"> */}
-    {/* //       <h2 className="text-lg font-semibold mb-4">Enter Your Institute Details Here</h2>
-    //       <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> */}
-    {/* //         <div>
-    //           <label className="block text-sm mb-1">Institute Name</label>
-    //           <input type="text" className="w-full p-2 rounded bg-white/20 text-white border border-white/30 outline-none" />
-    //         </div>
-    //         <div> */}
-    {/* //           <label className="block text-sm mb-1">Registered Date</label>
-    //           <input type="date" className="w-full p-2 rounded bg-white/20 text-white border border-white/30 outline-none" />
-    //         </div> */}
-    {/* //         <div className="col-span-1 md:col-span-2">
-    //           <label className="block text-sm mb-1">Description</label>
-    //           <textarea className="w-full p-2 rounded bg-white/20 text-white border border-white/30 outline-none" rows={3}></textarea>
-    //         </div>
-    //       </div> */}
-    {/* //     </div> */}
-
-         {/* Address Info */}
-    {/* //     <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20">
-    //       <h2 className="text-lg font-semibold mb-4">Enter Your Address Information Here</h2>
-    //       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    //         <div> */}
-    {/* //           <label className="block text-sm mb-1">Address Line 1</label>
-    //           <input type="text" className="w-full p-2 rounded bg-white/20 text-white border border-white/30 outline-none" />
-    //         </div> */}
-    {/* //         <div>
-    //           <label className="block text-sm mb-1">Address Line 2</label>
-    //           <input type="text" className="w-full p-2 rounded bg-white/20 text-white border border-white/30 outline-none" />
-    //         </div>
-    //       </div> */}
-    {/* //     </div> */}
-    {/* //   </div> */}
-    {/* // </div> */}
-  
-
-
-
-
-
       {/* Summary Cards */}
-      <div className="mt-5">
+      <div className="mt-5 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-25 mb-6">
           {cards.map((card, i) => (
             <div
               key={i}
-              className="relative text-center text-gray-800 overflow-hidden rounded-lg"
+              className="relative text-center text-gray-800 overflow-hidden rounded-3xl "
               style={{
                 backgroundImage: `url(${card.image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 height: '129px',
                 width: '286px',
+               
               }}
             >
               <div className="relative z-10 p-4 h-full flex flex-col justify-between">
@@ -317,8 +242,8 @@ const Institutepage: React.FC = () => {
 
 
 
-            <div className="mt-auto flex items-end justify-between px-4 py-2">
-              <div className="text-sm font-medium">{institute.plan}</div>
+            <div className="mt-auto flex items-end justify-between px-1 py-2">
+              <div className="text-sm font-medium text-left">{institute.plan}</div>
               <button className="bg-green-600 text-white text-sm px-4 py-1.5 rounded-md">
                 View
               </button>
