@@ -3,7 +3,7 @@ import MainLayout from "../layout/Navbar";
 import Maindash from "../pages/Maindash/Maindash";
 import Institute from "../pages/Institute/Institute";
 import Payment from "../pages/Payment/Payment";
-import Subscription from "../pages/Subscription/Subscription";
+import Subscription from "../pages/Subscription/subscription";
 import About from "../pages/About/About";
 
 const AppRoutes = () => {
