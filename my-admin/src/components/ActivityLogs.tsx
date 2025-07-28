@@ -17,7 +17,7 @@ const logs = [
 
 const ActivityLogs: React.FC = () => {
     return (
-        <div className="bg-white/20 backdrop-blur-md shadow-xl p-6 w-full h-93 border border-white/20 rounded-xl ">
+        <div className="bg-white/20 backdrop-blur-md shadow-xl p-6 w-full h-84 border border-white/20 rounded-xl ">
             <div className="flex flex-col gap-10">
                 <div className="relative pl-12 pt-19">
                     <div className="absolute left-7 top-8 h-[250px] flex flex-col items-center z-10">
@@ -44,7 +44,7 @@ const ActivityLogs: React.FC = () => {
                 </div>
 
                 <div>
-                    <h2 className="bg-green-500 text-white text-xs font-semibold pl-3 pt-1 mt-6 w-26 h-6 rounded-md shadow">Notes Created</h2>
+                    <h2 className="bg-green-500 text-white text-xs font-semibold pl-3 pt-1 mt-3 w-26 h-6 rounded-md shadow">Notes Created</h2>
                 </div>
             </div>
         </div>

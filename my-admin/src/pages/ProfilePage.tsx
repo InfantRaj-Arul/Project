@@ -11,22 +11,22 @@ const ProfilePage: React.FC = () => {
             style={{ backgroundImage: `url(${backgroundImage})` }}
         >
             <div
-                className="min-h-[95vh] bg-cover bg-no-repeat bg-center pt-5 px-5 rounded-2xl"
+                className="min-h-[94vh] bg-cover bg-no-repeat bg-center pt-5 px-5 rounded-2xl overflow-hidden"
                 style={{ backgroundImage: `url(${bginsideImage})` }}
             >
                 <div className="w-full">
                     {/* Header */}
-                    <div className="bg-[#0B2447] rounded-t-xl text-white flex items-center gap-2 px-6 py-4">
+                    <div className="bg-[#0B2447] rounded-t-xl text-white flex items-center gap-2 px-4 py-4">
                         <span className="text-xl font-bold">&lt;</span>
                         <div className="w-7 h-7 bg-white rounded-full" />
-                        <h1 className="text-lg font-semibold">Bharathidasan University</h1>
+                        <h1 className="text-lg font-semibold ">Bharathidasan University</h1>
                     </div>
 
                     {/* Banner */}
                     <img
                         src={university}
                         alt="University"
-                        className="w-full h-[260px] object-cover rounded-b-xl"
+                        className="w-full h-[240px] object-cover rounded-b-xl"
                     />
 
                     {/* Profile View */}

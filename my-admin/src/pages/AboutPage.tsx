@@ -11,7 +11,7 @@ const AboutPage: React.FC = () => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div
-        className="min-h-[95vh] bg-cover bg-no-repeat bg-center pt-5 px-5 rounded-2xl"
+        className="min-h-[94vh] bg-cover bg-no-repeat bg-center pt-5 px-5 rounded-2xl overflow-hidden"
         style={{ backgroundImage: `url(${bginsideImage})` }}
       >
         {/* Header */}
@@ -25,11 +25,11 @@ const AboutPage: React.FC = () => {
         <img
           src={university}
           alt="University"
-          className="w-full h-[260px] object-cover rounded-b-xl"
+          className="w-full h-[240px] object-cover rounded-b-xl"
         />
 
         {/* About View */}
-        <div className="px-4 mt-6 w-full max-w-5xl">
+        <div className=" mt-3 max-w-5xl">
           <AboutView />
         </div>
       </div>

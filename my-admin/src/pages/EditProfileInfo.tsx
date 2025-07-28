@@ -9,11 +9,11 @@ const EditProfile: React.FC = () => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div
-        className="min-h-[95vh] bg-cover bg-no-repeat bg-center pt-5 px-5 rounded-2xl"
+        className="min-h-[94vh] bg-cover bg-no-repeat bg-center pt-3 px-5 rounded-2xl overflow-hidden"
         style={{ backgroundImage: `url(${bginsideImage})` }}
       >
-        <div className="bg-white/30 backdrop-blur-md rounded-xl shadow-xl p-6 w-full max-w-6xl mx-auto text-white border border-white/20 ">
-          <h2 className="text-xl font-semibold mb-6 text-[#0E2B56] border-b border-[#354D7157] pb-2">Edit Institute Information</h2>
+        <div className="bg-white/30 backdrop-blur-md rounded-xl shadow-xl p-6 pt-2 w-full h-166 max-w-6xl mx-auto text-white border border-white/20 ">
+          <h2 className="text-xl font-semibold mb-2 text-[#0E2B56] border-b border-[#354D7157] pb-2">Edit Institute Information</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[

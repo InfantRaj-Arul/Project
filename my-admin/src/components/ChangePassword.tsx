@@ -5,7 +5,7 @@ const ChangePassword: React.FC = () => {
     return (
         <div className="flex flex-col gap-6 w-full ">
             {/* Institute Info Block */}
-            <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl text-white w-full border border-white/20">
+            <div className="bg-white/10 backdrop-blur-md p-4 pt-3 rounded-xl text-white w-full border border-white/20">
                 <h1 className="text-base font-semibold mb-4 text-[#0E2B56] ">Institute Detail</h1>
 
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
@@ -23,7 +23,7 @@ const ChangePassword: React.FC = () => {
 
 
             {/* Password Update Block */}
-            <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-xl p-6 text-white border border-white/20">
+            <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-xl p-6 pt-3 text-white border border-white/20">
                 <h2 className="text-base font-semibold mb-4 text-[#0E2B56] border-b border-[#354D7157] pb-2">
                     Update Password
                 </h2>
@@ -58,8 +58,6 @@ const ChangePassword: React.FC = () => {
                     Update Password
                 </button>
             </div>
-
-
         </div>
     );
 };

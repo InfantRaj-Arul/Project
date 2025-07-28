@@ -11,7 +11,7 @@ const ProfileView: React.FC = () => {
     const [activeTab, setActiveTab] = useState("Personal Info");
 
     return (
-        <div className="flex flex-col xl:flex-row gap-6 text-sm text-white mt-6">
+        <div className="flex flex-col xl:flex-row gap-6 text-sm text-white mt-3">
             {/* Sidebar */}
             <div className="w-full xl:max-w-[300px]">
                 <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />

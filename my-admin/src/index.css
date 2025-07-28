@@ -4,6 +4,10 @@
 
 @import "tailwindcss";
 
+/* Optional: Add to your global CSS */
+/* body {
+  overflow-x: hidden;
+} */
 
 
 /* 

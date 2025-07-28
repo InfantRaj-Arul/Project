@@ -17,7 +17,7 @@ const InstituteInfo: React.FC = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="bg-white/10 border border-white/20 backdrop-blur-md rounded-xl shadow-xl p-6 w-full">
+        <div className="bg-white/10 border border-white/20 backdrop-blur-md rounded-xl shadow-xl pl-6 pr-6 pt-2 pb-2 w-full h-71">
             <h2 className="text-lg font-semibold mb-4 text-[#0E2B56] border-b border-[#354D7157] pb-2">
                 Institute Details
             </h2>
@@ -33,7 +33,7 @@ const InstituteInfo: React.FC = () => {
                 ))}
             </div>
 
-            <div className="flex justify-between mt-4">
+            <div className="flex justify-between mt-6">
                 <button
                     onClick={() => navigate("/edit-institute")}
                     className="bg-white text-[#0B2447] font-semibold px-6 py-2 rounded-md shadow"

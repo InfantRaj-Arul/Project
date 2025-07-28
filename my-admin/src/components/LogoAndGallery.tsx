@@ -11,9 +11,9 @@ const galleryImages = [img1, img2, img3, img4];
 const LogoAndGallery: React.FC = () => {
     return (
         <div className="flex flex-col md:flex-row gap-6">
-            {/* Logo Card */}
+            {/* Logo */}
             <div className="pl-6 w-full md:w-1/3 ">
-                <h2 className="text-lg font-semibold mb-4 text-[#0E2B56] pb-2 ml-25 ">
+                <h2 className="text-lg font-semibold mb-2 text-[#0E2B56] pb-2 ml-25 ">
                     Logo
                 </h2>
                 <div className="w-[190px] h-[190px] bg-white/20  ml-25 border border-white/20 rounded-xl" >
@@ -24,16 +24,16 @@ const LogoAndGallery: React.FC = () => {
                 </div>
             </div>
 
-            {/* Gallery Card */}
+            {/* Gallery */}
             <div className="w-full md:w-[450px]">
-                <h2 className="text-lg font-semibold mb-4 text-[#0E2B56] pb-2">
+                <h2 className="text-lg font-semibold mb-2 text-[#0E2B56] pb-2">
                     Gallery
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
                     {galleryImages.map((imgSrc, i) => (
                         <div
                             key={i}
-                            className="w-full h-36 bg-white/20 flex items-center justify-center overflow-hidden border border-white/20 rounded-xl"
+                            className="w-52 h-34 bg-white/20 flex items-center justify-center overflow-hidden border border-white/20 rounded-xl"
                         >
                             <img
                                 src={imgSrc}
