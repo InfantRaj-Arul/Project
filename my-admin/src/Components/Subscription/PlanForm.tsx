@@ -172,7 +172,7 @@ const PlanForm: React.FC = () => {
         <div className="flex justify-between">
           <button
             className="bg-[#0C2D57] text-white px-6 py-2 rounded-md"
-            onClick={() => navigate("/")}
+            onClick={() => navigate(-1)}
           >
             Cancel
           </button>
