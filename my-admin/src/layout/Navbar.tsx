@@ -22,7 +22,6 @@ const MainLayout: React.FC = () => {
     { src: "/icons/pay.png", alt: "Calendar", id: "calendar", path: "/pay" },
     { src: "/icons/subs.png", alt: "Time", id: "time", path: "/subs" },
     { src: "/icons/noti.png", alt: "Payment", id: "payment", path: "/noti" },
-    { src: "/icons/User.png", alt: "Profile", id: "profile", path: "/profile" },
     { src: "/icons/abt.png", alt: "Business", id: "business", path: "/abt" },
   ];
 
@@ -35,7 +34,7 @@ const MainLayout: React.FC = () => {
           background: "linear-gradient(135deg, #B8D4E3 0%, #A8C8D8 100%)",
           boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
           backdropFilter: "blur(10px)",
-          height: "80px",
+          height: "80px", 
         }}
       >
         {/* Left side - Logo */}
