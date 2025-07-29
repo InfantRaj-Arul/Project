@@ -12,7 +12,9 @@ import Subscription from "../pages/Subscription/subscription";
 import About from "../pages/About/About";
 import AddInstitute from "../pages/Institute/AddInstitute";
 // import { Notification } from "../pages/Notification/Notifications";
-
+import ProfilePage from "../pages/About/ProfilePage";
+import EditProfile from "../pages/About/EditProfileInfo";
+import CoursesPage from "../components/CoursesView";
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -28,6 +30,12 @@ const AppRoutes = () => {
           <Route path="/pay" element={<Payment />} />
           <Route path="/subs" element={<Subscription />} />
           <Route path="/abt" element={<About />} />
+                  {/* <Route path="/" element={<Navigate to="/abt" replace />} /> */}
+        {/* <Route path="/institute/about" element={<About />} /> */}
+        <Route path="/institute/profile" element={<ProfilePage />} />
+        <Route path="/edit-institute" element={<EditProfile/>} />
+        <Route path="/institute/courses" element={<CoursesPage />} />
+
           <Route path="/noti" element={<div>Notifications Page</div>} />
         </Route>
       </Routes>
