@@ -52,7 +52,9 @@ const MainLayout: React.FC = () => {
             <Link 
               key={icon.id}
               to={icon.path}
-              className="group w-14 h-14 rounded-xl flex items-center justify-center cursor-pointer transition-all hover:bg-white/20"
+              className={`group w-14 h-14 rounded-xl flex items-center justify-center cursor-pointer transition-all hover:bg-white/20 ${
+                location.pathname === icon.path ? 'bg-white' : ''
+              }`}
             >
               <div className="relative w-8 h-8 flex items-center justify-center">
                 <img 

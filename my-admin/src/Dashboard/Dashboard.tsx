@@ -1,5 +1,3 @@
-"use client"
-
 import { Building2, CreditCard, Users, Ticket, Filter, Bell, Target } from "lucide-react"
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 import { useState } from "react"
