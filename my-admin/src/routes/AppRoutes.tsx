@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "../index.css";
 
-import PlanForm from "../Components/Subscription/PlanForm";
+import PlanForm from "../pages/Subscription/PlanForm";
 
 import MainLayout from "../layout/Navbar";
 import Dashboard from "../pages/Maindash/Maindash";
@@ -11,11 +11,12 @@ import Payment from "../pages/Payment/Payment";
 import Subscription from "../pages/Subscription/subscription";
 import About from "../pages/About/About";
 
+
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/add-institute" element={<PlanForm />} />
+        
 
         <Route element={<MainLayout />}>
           <Route path="/" element={<Dashboard />} />{" "}
@@ -24,6 +25,7 @@ const AppRoutes = () => {
           <Route path="/ins" element={<Institute />} />
           <Route path="/pay" element={<Payment />} />
           <Route path="/subs" element={<Subscription />} />
+          <Route path="/add-institute" element={<PlanForm />} />
           <Route path="/abt" element={<About />} />
           <Route path="/noti" element={<div>Notifications Page</div>} />
         </Route>

@@ -17,7 +17,12 @@ const MainLayout: React.FC = () => {
   const location = useLocation();
 
   const navIcons: NavIcon[] = [
-    { src: "/icons/Group 163.png", alt: "Dashboard", id: "dashboard", path: "/dashboard" },
+    {
+      src: "/icons/Group 163.png",
+      alt: "Dashboard",
+      id: "dashboard",
+      path: "/dashboard",
+    },
     { src: "/icons/insi.png", alt: "Users", id: "users", path: "/ins" },
     { src: "/icons/pay.png", alt: "Calendar", id: "calendar", path: "/pay" },
     { src: "/icons/subs.png", alt: "Time", id: "time", path: "/subs" },
@@ -49,15 +54,15 @@ const MainLayout: React.FC = () => {
         {/* Center - Navigation Icons */}
         <div className="flex items-center gap-6">
           {navIcons.map((icon) => (
-            <Link 
+            <Link
               key={icon.id}
               to={icon.path}
               className="group w-14 h-14 rounded-xl flex items-center justify-center cursor-pointer transition-all hover:bg-white/20"
             >
               <div className="relative w-8 h-8 flex items-center justify-center">
-                <img 
-                  src={icon.src} 
-                  alt={icon.alt} 
+                <img
+                  src={icon.src}
+                  alt={icon.alt}
                   className="relative z-10 w-full h-full object-contain transition-all duration-300 group-hover:scale-110"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -75,9 +80,9 @@ const MainLayout: React.FC = () => {
             <Bell className="w-5 h-5 text-white" />
           </div>
           <div className="w-12 h-12 rounded-full overflow-hidden shadow-lg cursor-pointer hover:shadow-xl transition-all border-2 border-white/50">
-            <img 
-              src="/profile.jpg" 
-              alt="Profile" 
+            <img
+              src="/profile.jpg"
+              alt="Profile"
               className="w-full h-full object-cover"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
@@ -89,8 +94,11 @@ const MainLayout: React.FC = () => {
       </nav>
 
       {/* Main Content Area */}
-      <div className="pt-28 pb-8 px-8 min-h-screen">
-        <Outlet />
+      <div className="fixed inset-0 overflow-y-auto px-10 py-8 w-full min-h-screen pt-25 ">
+        <div className="max-w-9xl w-full mx-auto rounded-lg">
+          <Outlet />
+        </div>
+              
       </div>
     </>
   );
