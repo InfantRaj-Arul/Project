@@ -18,7 +18,6 @@ const AppRoutes = () => {
           <Route path="/subs" element={<Subscription/>} />
           <Route path="/abt" element={<About />} />
           <Route path="/noti" element={<div>Notifications Page</div>} />
-          <Route path="/profile" element={<div>Profile Page</div>} />
         </Route>
       </Routes>
     </BrowserRouter>
