@@ -1,6 +1,6 @@
 "use client"
 
-import { Building2, CreditCard, Users, Ticket, Filter, Bell, Target } from "lucide-react"
+import { Building2, CreditCard, Users, Ticket, Filter } from "lucide-react"
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 import { useState } from "react"
 
@@ -62,15 +62,16 @@ const DashboardStats = () => {
   const StatCard = ({ title, value, icon: Icon }) => {
     return (
       <div
-        className="relative rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:scale-105 hover:shadow-lg"
+        className="relative rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:scale-105 hover:shadow-lg group"
         style={{
-          width: "300px",
+          width: "250px",
           height: "149px",
           backgroundImage: "url('/rectangle.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           cursor: "pointer",
+          flexShrink: 0,
         }}
       >
         <div className="flex items-center gap-3 z-10 relative">
@@ -82,7 +83,6 @@ const DashboardStats = () => {
             style={{
               fontFamily: "Montserrat",
               fontWeight: 600,
-              fontStyle: "normal",
               fontSize: "18px",
               lineHeight: "100%",
               letterSpacing: "-0.02em",
@@ -94,7 +94,6 @@ const DashboardStats = () => {
         <div className="text-slate-800 text-3xl font-bold z-10 relative transition-all duration-300 group-hover:text-blue-900">
           {value}
         </div>
-        {/* Hover overlay effect */}
         <div className="absolute inset-0 bg-blue-500/10 opacity-0 hover:opacity-100 rounded-2xl transition-all duration-300"></div>
       </div>
     )
@@ -104,21 +103,21 @@ const DashboardStats = () => {
     return (
       <div
         className={`transition-all duration-300 ease-in-out overflow-hidden ${
-          showFilter ? "max-h-32 opacity-100 mb-6" : "max-h-0 opacity-0"
+          showFilter ? "max-h-[120px] opacity-100 mb-6" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="flex flex-row items-center gap-[30px] w-[1321px] h-[120px]">
+        <div className="flex flex-row items-center gap-[30px] w-full max-w-[1321px] h-[120px]">
           {/* Month Filter */}
           <div
-            className="flex flex-col items-start p-[16px] gap-[16px] w-[645px] h-[120px] rounded-[16px]"
+            className="flex flex-col items-start p-[16px] gap-[16px] w-full max-w-[645px] h-[120px] rounded-[16px]"
             style={{
               background: "rgba(200, 246, 255, 0.5)",
               boxShadow: "inset 0px 4px 122px rgba(255, 255, 255, 0.5)",
               backdropFilter: "blur(76px)",
             }}
           >
-            <div className="flex flex-col items-start gap-[16px] w-[591px] h-[86px]">
-              <div className="flex flex-col justify-center items-start gap-[16px] w-[591px] h-[22px]">
+            <div className="flex flex-col items-start gap-[16px] w-full h-[86px]">
+              <div className="flex flex-col justify-center items-start gap-[16px] w-full h-[22px]">
                 <span
                   className="text-[#0E2B56]"
                   style={{
@@ -132,7 +131,7 @@ const DashboardStats = () => {
                   Month
                 </span>
               </div>
-              <div className="relative w-[591px] h-[48px]">
+              <div className="relative w-full h-[48px]">
                 <select
                   value={selectedMonth}
                   onChange={(e) => setSelectedMonth(e.target.value)}
@@ -160,7 +159,7 @@ const DashboardStats = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    
+                    <path d="M7 7l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
               </div>
@@ -169,15 +168,15 @@ const DashboardStats = () => {
 
           {/* Year Filter */}
           <div
-            className="flex flex-col items-start p-[16px] gap-[16px] w-[645px] h-[120px] rounded-[16px]"
+            className="flex flex-col items-start p-[16px] gap-[16px] w-full max-w-[645px] h-[120px] rounded-[16px]"
             style={{
               background: "rgba(200, 246, 255, 0.5)",
               boxShadow: "inset 0px 4px 122px rgba(255, 255, 255, 0.5)",
               backdropFilter: "blur(76px)",
             }}
           >
-            <div className="flex flex-col items-start gap-[16px] w-[591px] h-[86px]">
-              <div className="flex flex-col justify-center items-start gap-[16px] w-[591px] h-[22px]">
+            <div className="flex flex-col items-start gap-[16px] w-full h-[86px]">
+              <div className="flex flex-col justify-center items-start gap-[16px] w-full h-[22px]">
                 <span
                   className="text-[#0E2B56]"
                   style={{
@@ -191,7 +190,7 @@ const DashboardStats = () => {
                   Year
                 </span>
               </div>
-              <div className="relative w-[591px] h-[48px]">
+              <div className="relative w-full h-[48px]">
                 <select
                   value={selectedYear}
                   onChange={(e) => setSelectedYear(e.target.value)}
@@ -219,7 +218,7 @@ const DashboardStats = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                   
+                    <path d="M7 7l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
               </div>
@@ -231,17 +230,13 @@ const DashboardStats = () => {
   }
 
   return (
-    <div className="min-h-screen w-full overflow-hidden relative">
-      
-
+    <div 
+      className="w-full min-h-screen flex items-center justify-center p-6" 
+    style={{ 
+  background: "linear-gradient(135deg, rgb(173, 209, 235), rgb(135, 183, 225))" 
+}}>
       {/* Main Content - Centered Container */}
-      <div 
-        className="fixed top-[80px] left-[78px] right-[30px] h-[800px] overflow-auto p-8"
-        style={{
-          width: "1380px",
-          borderRadius: "12px",
-        }}
-      >
+      <div className="w-full max-w-7xl">
         {/* Header - Show Filter Button */}
         <div className="flex justify-start mb-8">
           <button
@@ -270,7 +265,7 @@ const DashboardStats = () => {
 
         {/* Stats Cards Container */}
         <div className="flex justify-center mb-12">
-          <div className="flex justify-between items-center w-full max-w-[1320px] gap-[31px]">
+          <div className="flex flex-wrap justify-center gap-6 w-full">
             {statsData.map((stat, index) => (
               <StatCard key={index} title={stat.title} value={stat.value} icon={stat.icon} />
             ))}
@@ -278,7 +273,7 @@ const DashboardStats = () => {
         </div>
 
         {/* Graphs & Trends Section */}
-        <div>
+        <div className="pb-8">
           <h2 
             className="text-slate-800 mb-6"
             style={{
@@ -369,7 +364,10 @@ const DashboardStats = () => {
                       <div className="text-blue-800 font-bold text-xl">1,234</div>
                       <div className="text-slate-600 text-sm">Active Subscriptions</div>
                     </div>
-                  
+                    <div className="bg-green-100/50 p-4 rounded-lg">
+                      <div className="text-green-800 font-bold text-xl">$12,345</div>
+                      <div className="text-slate-600 text-sm">Monthly Revenue</div>
+                    </div>
                     <div className="bg-purple-100/50 p-4 rounded-lg">
                       <div className="text-purple-800 font-bold text-xl">89%</div>
                       <div className="text-slate-600 text-sm">Renewal Rate</div>

@@ -12,6 +12,7 @@ const AppRoutes = () => {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Dashboard />} /> {/* Dashboard as home page */}
+          <Route path="/dashboard" element={<Dashboard />} /> {/* Also accessible via /dashboard */}
           <Route path="/ins" element={<Institute />} />
           <Route path="/pay" element={<Payment />} />
           <Route path="/subs" element={<Subscription/>} />
