@@ -231,12 +231,13 @@ const DashboardStats = () => {
 
   return (
     <div 
-      className="w-full min-h-screen flex items-center justify-center p-6" 
-    style={{ 
-  background: "linear-gradient(135deg, rgb(173, 209, 235), rgb(135, 183, 225))" 
-}}>
+      className="inset-0 overflow-y-auto flex items-center justify-center p-6"
+      style={{ 
+        background: "linear-gradient(135deg, rgb(173, 209, 235), rgb(135, 183, 225))",
+      }}
+    >
       {/* Main Content - Centered Container */}
-      <div className="w-full max-w-7xl">
+      <div className="w-full max-w-7xl mx-auto">
         {/* Header - Show Filter Button */}
         <div className="flex justify-start mb-8">
           <button
