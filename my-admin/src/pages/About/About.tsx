@@ -11,7 +11,7 @@ const About: React.FC = () => {
     //   style={{ backgroundImage: `url(${backgroundImage})` }}
     // >
       <div
-        className="min-h-[99vh] bg-cover bg-no-repeat bg-center pt-5 px-5 rounded-2xl overflow-hidden"
+        className="min-h-[99vh] bg-cover bg-no-repeat bg-center pt-5 ml-0 px-5 rounded-2xl overflow-hidden"
         style={{ backgroundImage: `url(${bginsideImage})` }}
       >
         {/* Header */}

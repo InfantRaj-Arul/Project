@@ -7,7 +7,8 @@ import Subscription from "../pages/Subscription/subscription";
 import About from "../pages/About/About";
 import ProfilePage from "../pages/About/ProfilePage";
 import EditProfile from "../pages/About/EditProfileInfo";
-import CoursesPage from "../components/CoursesView";
+// import CoursesPage from "../components/CoursesView";
+import CoursesView from "../components/CoursesView";
 
 const AppRoutes = () => {
   return (
@@ -15,6 +16,7 @@ const AppRoutes = () => {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Dashboard />} /> {/* Dashboard as home page */}
+          <Route path="/dashboard" element={<Dashboard />} /> {/* Also accessible via /dashboard */}
           <Route path="/ins" element={<Institute />} />
           <Route path="/pay" element={<Payment />} />
           <Route path="/subs" element={<Subscription/>} />
@@ -23,10 +25,9 @@ const AppRoutes = () => {
         {/* <Route path="/institute/about" element={<About />} /> */}
         <Route path="/institute/profile" element={<ProfilePage />} />
         <Route path="/edit-institute" element={<EditProfile/>} />
-        <Route path="/institute/courses" element={<CoursesPage />} />
+        <Route path="/institute/courses" element={<CoursesView/>} />
 
           <Route path="/noti" element={<div>Notifications Page</div>} />
-          <Route path="/profile" element={<div>Profile Page</div>} />
         </Route>
       </Routes>
     </BrowserRouter>

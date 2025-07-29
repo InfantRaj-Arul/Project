@@ -22,7 +22,6 @@ const MainLayout: React.FC = () => {
     { src: "/icons/pay.png", alt: "Calendar", id: "calendar", path: "/pay" },
     { src: "/icons/subs.png", alt: "Time", id: "time", path: "/subs" },
     { src: "/icons/noti.png", alt: "Payment", id: "payment", path: "/noti" },
-    { src: "/icons/User.png", alt: "Profile", id: "profile", path: "/profile" },
     { src: "/icons/abt.png", alt: "Business", id: "business", path: "/abt" },
   ];
 
@@ -90,8 +89,10 @@ const MainLayout: React.FC = () => {
       </nav>
 
       {/* Main Content Area */}
-      <div className="pt-28 pb-8 px-8 min-h-screen">
-        <Outlet />
+      <div className="fixed inset-0 overflow-y-auto px-10 py-8 w-full min-h-screen pt-25 ">
+        <div className="max-w-9xl w-full mx-auto rounded-lg">
+          <Outlet />
+        </div>
       </div>
     </>
   );
