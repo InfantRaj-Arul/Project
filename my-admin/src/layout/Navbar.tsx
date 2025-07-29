@@ -34,7 +34,7 @@ const MainLayout: React.FC = () => {
           background: "linear-gradient(135deg, #B8D4E3 0%, #A8C8D8 100%)",
           boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
           backdropFilter: "blur(10px)",
-          height: "80px",
+          height: "80px", 
         }}
       >
         {/* Left side - Logo */}

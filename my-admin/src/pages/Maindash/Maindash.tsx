@@ -3,6 +3,7 @@
 import { Building2, CreditCard, Users, Ticket, Filter } from "lucide-react"
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 import { useState } from "react"
+import bg4 from "../../assets/Desktop - 74.png" // Adjust the path as necessary
 
 const DashboardStats = () => {
   const [showFilter, setShowFilter] = useState(false)
@@ -231,9 +232,12 @@ const DashboardStats = () => {
 
   return (
     <div 
-      className="inset-0 overflow-y-auto flex items-center justify-center p-6"
-      style={{ 
-        background: "linear-gradient(135deg, rgb(173, 209, 235), rgb(135, 183, 225))",
+      className=" overflow-y-auto flex items-start justify-center p-6"
+        style={{
+        backgroundImage: `url(${bg4})`,
+        backgroundSize: 'cover',
+        width: '100%',
+        minHeight: '100vh',
       }}
     >
       {/* Main Content - Centered Container */}
