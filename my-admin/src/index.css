@@ -1,8 +1,21 @@
 @import "tailwindcss";
 
 
+
+
+
+
+
 /* @tailwind base;
 @tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+
 @tailwind utilities; */
 
 scrollbar-hidden {
@@ -27,6 +40,7 @@ body {
   
 
 }
+
 
 
 /* 
@@ -99,3 +113,8 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+.input-style {
+  @apply w-full px-4 py-2 bg-white/10 text-white border border-white/20 rounded-md backdrop-blur-md placeholder:text-[#0C2D57];
+
+  @apply border border-[#497097] px-4 py-2 rounded-md w-full text-[#0C2D57] focus:outline-none focus:ring-0 focus:border-black text-left;
+}
