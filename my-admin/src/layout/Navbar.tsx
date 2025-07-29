@@ -22,7 +22,6 @@ const MainLayout: React.FC = () => {
     { src: "/icons/pay.png", alt: "Calendar", id: "calendar", path: "/pay" },
     { src: "/icons/subs.png", alt: "Time", id: "time", path: "/subs" },
     { src: "/icons/noti.png", alt: "Payment", id: "payment", path: "/noti" },
-    { src: "/icons/User.png", alt: "Profile", id: "profile", path: "/profile" },
     { src: "/icons/abt.png", alt: "Business", id: "business", path: "/abt" },
   ];
 

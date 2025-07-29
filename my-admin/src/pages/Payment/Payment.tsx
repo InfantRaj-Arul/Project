@@ -1,6 +1,6 @@
 import React from "react";
 import viewIcon from "../../Assets/viewIcon.png";
-
+import bgImage from "../../Assets/bgImage.jpg";
 
 const feesData = Array(6).fill({
   id: "#1",
@@ -10,17 +10,19 @@ const feesData = Array(6).fill({
   amountPaid: "$0",
 });
 
-
-
-
-const payment = () => {
+const Payment = () => {
   return (
     <div
-      className="min-h-screen bg-cover bg-center flex items-center justify-center p-10"
-      
+      className="relative min-h-screen w-full bg-cover bg-center flex items-center justify-center px-6 py-10"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+      }}
     >
-      <div className="w-full max-w-6xl bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl text-white">
-        <h2 className="text-2xl font-semibold text-[#0E2B56] text-left mb-6">Fees</h2>
+      {/* Optional overlay if needed */}
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-sm z-0" />
+
+      <div className="relative z-10 w-full max-w-6xl p-8 rounded-2xl shadow-lg text-white bg-white/10 backdrop-blur-md">
+        <h2 className="text-2xl font-semibold   text-left text-[#0E2B56] mb-6">Fees</h2>
 
         <div className="overflow-x-auto">
           <table className="min-w-full text-sm border-separate border-spacing-y-4">
@@ -35,11 +37,11 @@ const payment = () => {
               </tr>
             </thead>
 
-            <tbody className="text-[#5E7795]">
+            <tbody className="text-[#0C2D57] font-medium">
               {feesData.map((fee, index) => (
                 <tr
                   key={index}
-                  className="bg-white/20 backdrop-blur-md shadow-md"
+                  className="bg-white/30 backdrop-blur-md shadow-md rounded-xl"
                 >
                   <td className="px-6 py-4 rounded-l-xl">{fee.id}</td>
                   <td className="px-6 py-4">{fee.institute}</td>
@@ -49,8 +51,8 @@ const payment = () => {
                   <td className="px-6 py-4 rounded-r-xl">
                     <img
                       src={viewIcon}
-                      alt="view"
-                      className="w-5 h-5 cursor-pointer"
+                      alt="View"
+                      className="w-5 h-5 cursor-pointer inline-block"
                     />
                   </td>
                 </tr>
@@ -61,6 +63,6 @@ const payment = () => {
       </div>
     </div>
   );
-}
+};
 
-export default payment
+export default Payment;

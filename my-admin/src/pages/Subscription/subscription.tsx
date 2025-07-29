@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Card1 from "../../Assets/Card1.png";
 import Button from "../../Assets/Button.png";
 import tickIcon from "../../Assets/tickIcon.png";
+import bgImage from "../../Assets/bgImage.jpg";
 
 const plans = [
   {
@@ -48,17 +49,21 @@ const plans = [
 
 const SubsCriptionPlan: React.FC = () => {
   const navigate = useNavigate();
-
-  
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(null);
 
   return (
-    <div
-      className="min-h-screen bg-cover bg-center relative"
-      style={{ backgroundImage: `url(${""})` }}
-    >
+    <div className="relative min-h-screen w-full overflow-hidden">
+      
+      <div
+        className="fixed top-0 left-0 w-[130vw] h-[130vh] bg-cover bg-center -translate-x-[15vw] -translate-y-[15vh] z-0"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      ></div>
+
+      
       <div className="absolute inset-0 bg-white/10 backdrop-blur-md z-0" />
 
+      
       <div className="relative z-10 px-6 py-10">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center mb-6">
@@ -77,25 +82,29 @@ const SubsCriptionPlan: React.FC = () => {
             {plans.map((plan, index) => (
               <div
                 key={index}
-                className=" w-full max-w-[350px] mx-auto rounded-xl bg-white/10 backdrop-blur-md shadow-xl p-5 text-white flex flex-col justify-between min-h-[600px]    "
+                className="w-full max-w-[350px] mx-auto rounded-xl bg-white/10 backdrop-blur-md shadow-xl p-5 text-white flex flex-col justify-between min-h-[700px]"
               >
                 <img
                   src={Card1}
                   alt="Card"
-                  className="rounded-md h-28 w-full object-cover mb-4"
+                  className="rounded-md h-45 w-full object-cover mb-4"
                 />
-                <h3 className="text-2xl text-left font-semibold">
-                  {plan.title}
-                </h3>
-                <p className="text-sm text-left text-white/80 mb-3">
-                  {plan.description}
-                </p>
+
+                <div className="mb-2 text-left">
+                  <h3 className="text-2xl font-semibold text-white">
+                    {plan.title}
+                  </h3>
+                  <p className="-mt-1 text-sm text-white/80">
+                    {plan.description}
+                  </p>
+                </div>
+
                 <p className="text-4xl font-bold text-white mb-4">
                   {plan.price}{" "}
                   <span className="text-sm font-normal">/Monthly</span>
                 </p>
 
-                <div className="mb-6">
+                <div className="mb-6 bg-white/10 backdrop-blur-sm rounded-lg p-4 shadow-inner">
                   <p className="text-sm font-semibold text-left mb-2 text-white/90">
                     FEATURES
                   </p>
@@ -103,7 +112,7 @@ const SubsCriptionPlan: React.FC = () => {
                     {plan.features.map((feature, i) => (
                       <li
                         key={i}
-                        className="flex items-center gap-2 text-sm text-white/90"
+                        className="flex items-center gap-2 text-sm text-white/90 min-h-[25px]"
                       >
                         <img src={tickIcon} alt="✓" className="w-4 h-4" />
                         {feature}
@@ -112,7 +121,7 @@ const SubsCriptionPlan: React.FC = () => {
                   </ul>
                 </div>
 
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center relative">
                   <button
                     onClick={() => setActiveIndex(index)}
                     className={`px-4 py-1 text-sm rounded-md transition-colors duration-200 ${
@@ -123,11 +132,40 @@ const SubsCriptionPlan: React.FC = () => {
                   >
                     {activeIndex === index ? "Active" : "Activate"}
                   </button>
-                  <img
-                    src={Button}
-                    alt="Menu"
-                    className="w-5 h-5 cursor-pointer"
-                  />
+
+                  <div className="relative">
+                    <img
+                      src={Button}
+                      alt="Menu"
+                      className="w-5 h-5 cursor-pointer"
+                      onClick={() =>
+                        setOpenMenuIndex(openMenuIndex === index ? null : index)
+                      }
+                    />
+
+                    {openMenuIndex === index && (
+                      <div className="absolute right-0 mt-2 w-32 bg-white text-[#0C2D57] rounded-md shadow-lg z-50 text-sm">
+                        <button
+                          className="w-full text-left px-4 py-2 hover:bg-gray-100"
+                          onClick={() => {
+                            console.log("Edit clicked:", plan.title);
+                            setOpenMenuIndex(null);
+                          }}
+                        >
+                          Edit
+                        </button>
+                        <button
+                          className="w-full text-left px-4 py-2 hover:bg-gray-100"
+                          onClick={() => {
+                            console.log("Delete clicked:", plan.title);
+                            setOpenMenuIndex(null);
+                          }}
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

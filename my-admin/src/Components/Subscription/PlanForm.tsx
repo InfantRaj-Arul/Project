@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import pro from "../../Assets/pro.png";
 import tickIcon from "../../Assets/tickIcon.png";
+import bgImage from "../../Assets/bgImage.jpg"; 
 
 const PlanForm: React.FC = () => {
   const navigate = useNavigate();
@@ -23,7 +24,6 @@ const PlanForm: React.FC = () => {
 
   const handleSubmit = () => {
     const newWindow = window.open("", "_blank", "width=full,height=600");
-
     if (newWindow) {
       newWindow.document.write(`
         <html>
@@ -81,16 +81,22 @@ const PlanForm: React.FC = () => {
   };
 
   return (
-    <div
-      className="min-h-screen bg-cover bg-center flex items-center justify-center p-6"
-      style={{ backgroundImage: `url(${""})` }}
-    >
-      <div className="w-full max-w-6xl bg-text-[#0C2D57] bg-opacity-10 backdrop-blur-md rounded-2xl shadow-lg p-8 text-white">
+    <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center p-6">
+      {/* Background Image Layer */}
+      <div
+        className="fixed top-0 left-0 w-[130vw] h-[130vh] bg-cover bg-center -translate-x-[15vw] -translate-y-[15vh] z-0"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      />
+      {/* Blur Overlay */}
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-sm z-0" />
+
+      {/* Main Form */}
+      <div className="w-full max-w-6xl bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-8 text-white relative z-10">
         <h3 className="text-lg text-left font-semibold mb-6 text-[#0C2D57]">
           Enter Your Institute Details Here
         </h3>
 
-        
+        {/* Profile Upload */}
         <div className="flex flex-col items-center mb-8">
           <img
             src={profileImg}
@@ -109,7 +115,7 @@ const PlanForm: React.FC = () => {
           <p className="text-sm text-[#0C2D57]">PNG or JPEG (Max 800K)</p>
         </div>
 
-    
+        {/* Top Input Fields */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {["Plan Name", "Plan Price", "Support Level"].map((field, idx) => (
             <div key={idx}>
@@ -121,7 +127,7 @@ const PlanForm: React.FC = () => {
           ))}
         </div>
 
-       
+        {/* Description */}
         <div className="mb-6">
           <label className="text-sm font-medium mb-1 block text-left text-[#0C2D57]">
             Plan Description
@@ -129,7 +135,7 @@ const PlanForm: React.FC = () => {
           <textarea className="input-style h-20" />
         </div>
 
-      
+        {/* Number Fields */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 text-[#0C2D57]">
           {[
             "Duration",
@@ -148,7 +154,6 @@ const PlanForm: React.FC = () => {
               <input className="input-style mb-2" />
               {label.includes("Number") && (
                 <label className="flex items-center gap-2 text-sm mt-1">
-                  
                   <span className="relative inline-block w-5 h-5">
                     <input
                       type="checkbox"
@@ -168,7 +173,7 @@ const PlanForm: React.FC = () => {
           ))}
         </div>
 
-        
+        {/* Buttons */}
         <div className="flex justify-between">
           <button
             className="bg-[#0C2D57] text-white px-6 py-2 rounded-md"
@@ -185,7 +190,7 @@ const PlanForm: React.FC = () => {
         </div>
       </div>
 
-      
+      {/* Checkbox Tick Style */}
       <style>{`
         input[type="checkbox"]:checked + span + img {
           opacity: 1;

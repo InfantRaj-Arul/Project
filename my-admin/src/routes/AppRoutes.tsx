@@ -4,10 +4,8 @@ import "../index.css";
 
 import PlanForm from "../Components/Subscription/PlanForm";
 
-// import React from 'react'
-
 import MainLayout from "../layout/Navbar";
-import Dashboard from "../pages/Maindash/Maindash"; // Assuming this is your dashboard component
+import Dashboard from "../pages/Maindash/Maindash";
 import Institute from "../pages/Institute/Institute";
 import Payment from "../pages/Payment/Payment";
 import Subscription from "../pages/Subscription/subscription";
@@ -21,13 +19,13 @@ const AppRoutes = () => {
 
         <Route element={<MainLayout />}>
           <Route path="/" element={<Dashboard />} />{" "}
-          {/* Dashboard as home page */}
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/ins" element={<Institute />} />
           <Route path="/pay" element={<Payment />} />
           <Route path="/subs" element={<Subscription />} />
           <Route path="/abt" element={<About />} />
           <Route path="/noti" element={<div>Notifications Page</div>} />
-          <Route path="/profile" element={<div>Profile Page</div>} />
         </Route>
       </Routes>
     </BrowserRouter>
