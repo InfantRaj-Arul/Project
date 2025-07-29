@@ -5,6 +5,7 @@ import Institute from "../pages/Institute/Institute";
 import Payment from "../pages/Payment/Payment";
 import Subscription from "../pages/Subscription/subscription";
 import About from "../pages/About/About";
+import { Notification } from "../pages/Notification/Notifications";
 
 const AppRoutes = () => {
   return (
@@ -15,9 +16,9 @@ const AppRoutes = () => {
           <Route path="/" element={<div className="pt-28"></div>} />
           <Route path="/ins" element={<Institute />} />
           <Route path="/pay" element={<Payment />} />
-          <Route path="/subs" element={<Subscription/>} />
+          <Route path="/subs" element={<Subscription />} />
           <Route path="/dashboard" element={<About />} />
-          <Route path="/noti" element={<div>Notifications Page</div>} />
+          <Route path="/notification" element={<Notification />} />
           <Route path="/profile" element={<div>Profile Page</div>} />
           <Route path="/abt" element={<About />} />
         </Route>
