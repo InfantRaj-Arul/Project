@@ -65,7 +65,7 @@ const DashboardStats = () => {
       <div
         className="relative rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:scale-105 hover:shadow-lg group"
         style={{
-          width: "250px",
+          width: "300px",
           height: "149px",
           backgroundImage: "url('/rectangle.png')",
           backgroundSize: "cover",
@@ -370,7 +370,7 @@ const DashboardStats = () => {
                       <div className="text-slate-600 text-sm">Active Subscriptions</div>
                     </div>
                     <div className="bg-green-100/50 p-4 rounded-lg">
-                      <div className="text-green-800 font-bold text-xl">$12,345</div>
+                      <div className="text-green-800 font-bold text-xl">12,345</div>
                       <div className="text-slate-600 text-sm">Monthly Revenue</div>
                     </div>
                     <div className="bg-purple-100/50 p-4 rounded-lg">

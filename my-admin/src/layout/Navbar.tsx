@@ -1,4 +1,3 @@
-// MainLayout.tsx
 "use client";
 
 import { Target, Bell } from "lucide-react";
@@ -52,7 +51,9 @@ const MainLayout: React.FC = () => {
             <Link 
               key={icon.id}
               to={icon.path}
-              className="group w-14 h-14 rounded-xl flex items-center justify-center cursor-pointer transition-all hover:bg-white/20"
+              className={`group w-14 h-14 rounded-xl flex items-center justify-center cursor-pointer transition-all hover:bg-white ${
+                location.pathname === icon.path ? "bg-white" : ""
+              }`}
             >
               <div className="relative w-8 h-8 flex items-center justify-center">
                 <img 
@@ -89,11 +90,13 @@ const MainLayout: React.FC = () => {
       </nav>
 
       {/* Main Content Area */}
-      <div className="pt-28 pb-8 px-8 min-h-screen">
-        <Outlet />
+      <div className="fixed inset-0 overflow-y-auto px-10 py-8 w-full min-h-screen pt-25">
+        <div className="max-w-9xl w-full mx-auto rounded-lg">
+          <Outlet />
+        </div>
       </div>
     </>
   );
 };
 
-export default MainLayout;
+export default MainLayout; // Fixed typo: "detatfault" → "default"
