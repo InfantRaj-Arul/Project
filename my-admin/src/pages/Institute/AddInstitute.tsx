@@ -9,7 +9,7 @@ const AddInstitute: React.FC = () => {
     const [activeStep, setActiveStep] = useState(1);
     return (
 
-        <div className="relative inset-0 z-0 bg-cover bg-center" style={{
+        <div className="relative inset-0 z-0 bg-cover bg-center rounded-lg" style={{
             backgroundImage: `url(${bg4})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',

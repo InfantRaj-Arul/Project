@@ -88,11 +88,12 @@ const Institute: React.FC = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="min-h-screen px-6 py-4" style={{
+    <div className="min-h-screen px-4 py-4 rounded-2xl" style={{
       backgroundImage: `url(${bg4})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
+    
     }}>
       {/* Header Section */}
       <div className="flex justify-between items-center flex-col md:flex-row">
@@ -192,7 +193,7 @@ const Institute: React.FC = () => {
 
       {/* Summary Cards */}
       <div className="mt-5 ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-25 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-15 mb-6">
           {cards.map((card, i) => (
             <div
               key={i}

@@ -13,13 +13,13 @@ const AppRoutes = () => {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Dashboard />} /> {/* Dashboard as home page */}
+          <Route path="/dashboard" element={<Dashboard />} /> {/* Also accessible via /dashboard */}
           <Route path="/ins" element={<Institute />} />
            <Route path="/addins" element={<AddInstitute />} />
           <Route path="/pay" element={<Payment />} />
           <Route path="/subs" element={<Subscription/>} />
           <Route path="/abt" element={<About />} />
           <Route path="/noti" element={<div>Notifications Page</div>} />
-          <Route path="/profile" element={<div>Profile Page</div>} />
         </Route>
       </Routes>
     </BrowserRouter>
