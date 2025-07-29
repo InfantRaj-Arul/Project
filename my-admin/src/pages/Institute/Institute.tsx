@@ -1,18 +1,19 @@
+
 import React, { useState } from 'react';
-import bg1 from '../assets/Rec1.png';
-import bg2 from '../assets/Rec2.png';
-import bg3 from '../assets/Rec3.png';
-import bg4 from '../assets/containerimg.png';
-import icon from '../assets/cardicon.png';
-import icon1 from '../assets/icons1.png';
-import icon2 from '../assets/icons2.png';
-import icon3 from '../assets/icons3.png';
-import icon4 from '../assets/icons4.png';
-import map from '../assets/mapicon.png';
-import graph from '../assets/graphicon.png';
-import bicon from '../assets/Filter.png';
-import bicon1 from '../assets/Plusimg.png';
-import backimg from '../assets/bgimg.png';
+import bg1 from '../../assets/Rec1.png';
+import bg2 from '../../assets/Rec2.png';
+import bg3 from '../../assets/Rec3.png';
+import bg4 from '../../assets/containerimg.png';
+import icon from '../../assets/cardicon.png';
+import icon1 from '../../assets/icons1.png';
+import icon2 from '../../assets/icons2.png';
+import icon3 from '../../assets/icons3.png';
+import icon4 from '../../assets/icons4.png';
+import map from '../../assets/mapicon.png';
+import graph from '../../assets/graphicon.png';
+import bicon from '../../assets/Filter.png';
+import bicon1 from '../../assets/Plusimg.png';
+import backimg from '../../assets/bgimg.png';
 import { useNavigate } from "react-router-dom";
 type Institute = {
   name: string;
@@ -57,7 +58,7 @@ const institutes: Institute[] = [
 const cards = [
   {
     title: "Total Institute",
-    image: bg1, 
+    image: bg1,
   },
   {
     title: "Active Institute",
@@ -81,10 +82,10 @@ const filtercards = [
   },
 ];
 
-const Institutepage: React.FC = () => {
+const Institute: React.FC = () => {
   const [showFilter, setShowFilter] = useState(false);
-   const [showModal, setShowModal] = useState(false);
-   const navigate = useNavigate()
+  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate()
 
   return (
     <div className="min-h-screen px-6 py-4" style={{
@@ -100,7 +101,7 @@ const Institutepage: React.FC = () => {
           onClick={() => setShowFilter(!showFilter)}
           className="flex items-center bg-[#FFFFFF] text-[#0E2B56] px-4 py-2 rounded-lg mb-4 md:mb-0 min-h-[48px] min-w-[105px] text-[16px]"
         >
-          <img src={bicon} alt="filter icon" className="mr-2 w-[24px] h-[24px] font-Montserrat"/>
+          <img src={bicon} alt="filter icon" className="mr-2 w-[24px] h-[24px] font-Montserrat" />
           <span className="text-[16px]" >
             {showFilter ? 'Hide' : 'Show Filter'}
           </span>
@@ -108,7 +109,7 @@ const Institutepage: React.FC = () => {
 
         {/* Add User Button */}
         <button
-          onClick={() =>navigate("/institute")
+          onClick={() => navigate("/addins")
             // setShowModal(true);
             // setMenuOpenIndex(null);
           }
@@ -126,60 +127,64 @@ const Institutepage: React.FC = () => {
         <>
           {/* Filter Container */}
           <div className="mb-6 text-gray-700">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 mb-6 mt-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mb-6 mt-5">
 
               {/* Box1............. */}
-                <div className="w-[370px] h-[120px] p-4 gap-4 flex flex-row items-start bg-[rgba(200,246,255,0.5)] shadow-inner backdrop-blur-[76px] rounded-[16px] box-border">
-                  <div className="w-[368px] h-[86px] flex flex-col items-start gap-4">
-                    {/* Title */}
-                    <div className="w-[368px] h-[22px] flex flex-col justify-center items-start gap-4">
-                      <div className="text-[#0E2B56] font-montserrat font-semibold text-[16px] leading-[22px] tracking-[-0.02em]">
-                        Subscription Plan
-                      </div>
-                    </div>
-                    {/* Button */}
-                    <div className="flex flex-col w-[338px] h-[48px] flex flex-row" >
-                      <select className="border border-[#4771AE] rounded-lg px-4 py-2 min-h-[40px] w-full">
-                      </select>
+              <div className="w-full max-w-full h-[120px] p-4 gap-4 flex flex-row items-start bg-[rgba(200,246,255,0.5)] shadow-inner backdrop-blur-[76px] rounded-[16px] box-border">
+                <div className="relative w-full h-[86px] flex flex-col items-start gap-4">
+                  {/* Title */}
+                  <div className="w-full max-w-[358px] h-[22px] flex items-center">
+                    <div className="text-[#0E2B56] font-montserrat font-semibold text-[16px] leading-[22px] tracking-[-0.02em]">
+                      Subscription Plan
                     </div>
                   </div>
-                </div>
-
-                {/* Box2............. */}
-                <div className="w-[370px] h-[120px] p-4 gap-4 flex flex-row items-start bg-[rgba(200,246,255,0.5)] shadow-inner backdrop-blur-[76px] rounded-[16px] box-border">
-                  <div className="w-[368px] h-[86px] flex flex-col items-start gap-4">
-                    {/* Title */}
-                    <div className="w-[368px] h-[22px] flex flex-col justify-center items-start gap-4">
-                      <div className="text-[#0E2B56] font-montserrat font-semibold text-[16px] leading-[22px] tracking-[-0.02em]">
-                        Status
-                      </div>
-                    </div>
-                    {/* Button */}
-                    <div className="flex flex-col w-[338px] h-[48px] flex flex-row" >
-                      <select className="border border-[#4771AE] rounded-lg px-4 py-2 min-h-[40px] w-full">
-                      </select>
-                    </div>
+                  {/* Dropdown */}
+                  <div className="w-full max-w-[318px] h-[48px]">
+                    <select className="w-full h-full border border-[#4771AE] rounded-lg px-4 py-2 min-h-[40px]">
+                    </select>
                   </div>
                 </div>
-
-                {/* Box3............. */}
-                <div className="w-[370px] h-[120px] p-4 gap-4 flex flex-row items-start bg-[rgba(200,246,255,0.5)] shadow-inner backdrop-blur-[76px] rounded-[16px] box-border">
-                  <div className="w-[368px] h-[86px] flex flex-col items-start gap-4">
-                    {/* Title */}
-                    <div className="w-[368px] h-[22px] flex flex-col justify-center items-start gap-4">
-                      <div className="text-[#0E2B56] font-montserrat font-semibold text-[16px] leading-[22px] tracking-[-0.02em]">
-                        Date
-                      </div>
-                    </div>
-                    {/* Button */}
-                    <div className="flex flex-col w-[338px] h-[48px] flex flex-row" >
-                      <select className="border border-[##4771AE] rounded-lg px-4 py-2 min-h-[40px] w-full">
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
               </div>
+
+
+              {/* Box2............. */}
+              <div className="w-full max-w-full h-[120px] p-4 gap-4 flex flex-row items-start bg-[rgba(200,246,255,0.5)] shadow-inner backdrop-blur-[76px] rounded-[16px] box-border">
+                <div className="relative w-full h-[86px] flex flex-col items-start gap-4">
+                  {/* Title */}
+                  <div className="w-full max-w-[358px] h-[22px] flex items-center">
+                    <div className="text-[#0E2B56] font-montserrat font-semibold text-[16px] leading-[22px] tracking-[-0.02em]">
+                      Status
+                    </div>
+                  </div>
+                  {/* Dropdown */}
+                  <div className="w-full max-w-[318px] h-[48px]">
+                    <select className="w-full h-full border border-[#4771AE] rounded-lg px-4 py-2 min-h-[40px]">
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+
+              {/* Box3............. */}
+              <div className="w-full max-w-full h-[120px] p-4 gap-4 flex flex-row items-start bg-[rgba(200,246,255,0.5)] shadow-inner backdrop-blur-[76px] rounded-[16px] box-border">
+                <div className="relative w-full h-[86px] flex flex-col items-start gap-4">
+                  {/* Title */}
+                  <div className="w-full max-w-[358px] h-[22px] flex items-center">
+                    <div className="text-[#0E2B56] font-montserrat font-semibold text-[16px] leading-[22px] tracking-[-0.02em]">
+                      Date
+                    </div>
+                  </div>
+                  {/* Dropdown */}
+                  <div className="w-full max-w-[318px] h-[48px]">
+                    <select className="w-full h-full border border-[#4771AE] rounded-lg px-4 py-2 min-h-[40px]">
+                      <option>---select---</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
           </div>
         </>
       )}
@@ -198,7 +203,7 @@ const Institutepage: React.FC = () => {
                 backgroundPosition: 'center',
                 height: '129px',
                 width: '286px',
-               
+
               }}
             >
               <div className="relative z-10 p-4 h-full flex flex-col justify-between">
@@ -256,6 +261,7 @@ const Institutepage: React.FC = () => {
   );
 };
 
-export default Institutepage;
+export default Institute;
+
 
 

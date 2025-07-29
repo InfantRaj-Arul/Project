@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
-import bg4 from '../assets/containerimg.png';
-import icon1 from '../assets/one.png';
-import icon2 from '../assets/two.png';
-import icon3 from '../assets/three.png';
-import icon4 from '../assets/four.png';
-import icon5 from '../assets/five.png';
-import line from '../assets/Line.png';
+import bg4 from '../../assets/containerimg.png';
+import line from '../../assets/Line.png';
 import { useNavigate } from "react-router-dom";
-import '../index.css';
+import '../../index.css';
 
-const SalariesForm: React.FC = () => {
+const AddInstitute: React.FC = () => {
     const navigate = useNavigate()
     const [activeStep, setActiveStep] = useState(1);
     return (
@@ -212,7 +207,7 @@ const SalariesForm: React.FC = () => {
                 {/* Header Section */}
                 <div className="flex justify-between items-center flex-col md:flex-row mb-5 ml-5 mr-5">
                     {/* Filter Button */}
-                    <button onClick={() => navigate("/")}
+                    <button onClick={() => navigate("/ins")}
                         className="flex items-center bg-[#FFFFFF] text-[#0E2B56] px-4 py-2 rounded-lg mb-4 md:mb-0 min-h-[48px] min-w-[105px] text-[16px]">
                         <span className="flex items-center ml-4">
                             Back
@@ -236,4 +231,4 @@ const SalariesForm: React.FC = () => {
     );
 };
 
-export default SalariesForm;
+export default AddInstitute;

@@ -1,38 +1,29 @@
-// import { BrowserRouter , Routes ,  Route, Navigate} from "react-router-dom";
-
-// // import React from 'react'
-
-// const AppRoutes = () => {
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-//         {/* <Route path="/" element={<Navigate to="/dashboard" replace />} />
-//         <Route path="/dashboard" element={<div>Dashboard</div>} />
-//         <Route path="/settings" element={<div>Settings</div>} />
-//         <Route path="/profile" element={<div>Profile</div>} />
-//         <Route path="*" element={<div>404 Not Found</div>} /> */}
-//        <Route path="categories" element={<institute />} />
-//       </Routes>
-//     </BrowserRouter>
-
-//   )
-// }
-
-import { BrowserRouter , Routes ,  Route, Navigate} from "react-router-dom";
-import Institutepage from "../institute/Institutepage";
-import SalariesForm from "../institute/SalariesForm";
-// import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "../layout/Navbar";
+import Dashboard from "../pages/Maindash/Maindash"; // Assuming this is your dashboard component
+import Institute from "../pages/Institute/Institute";
+import Payment from "../pages/Payment/Payment";
+import Subscription from "../pages/Subscription/subscription";
+import About from "../pages/About/About";
+import AddInstitute from "../pages/Institute/AddInstitute";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        { <Route path="/" element={<Institutepage/>} /> }
-        { <Route path="/institute" element={<SalariesForm/>} />}
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Dashboard />} /> {/* Dashboard as home page */}
+          <Route path="/ins" element={<Institute />} />
+           <Route path="/addins" element={<AddInstitute />} />
+          <Route path="/pay" element={<Payment />} />
+          <Route path="/subs" element={<Subscription/>} />
+          <Route path="/abt" element={<About />} />
+          <Route path="/noti" element={<div>Notifications Page</div>} />
+          <Route path="/profile" element={<div>Profile Page</div>} />
+        </Route>
       </Routes>
     </BrowserRouter>
+  );
+};
 
-  )
-}
-
-export default AppRoutes
+export default AppRoutes;
