@@ -1,19 +1,18 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css'
-import AppRoutes from './routes/AppRoutes'
+import './App.css';
+import AppRoutes from './routes/AppRoutes';
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-      <AppRoutes/>
-        </div>
-    </>
-  )
+    <div className="relative min-h-screen w-full overflow-x-hidden">
+      {/* Fixed Background Image with reduced coverage */}
+      
+
+      {/* Main App Routes (Page Content) */}
+      <div className="relative z-10">
+        <AppRoutes />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

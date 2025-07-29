@@ -12,11 +12,11 @@ const LogoAndGallery: React.FC = () => {
     return (
         <div className="flex flex-col md:flex-row gap-6">
             {/* Logo */}
-            <div className="pl-6 w-full md:w-1/3 ">
-                <h2 className="text-lg font-semibold mb-2 text-[#0E2B56] pb-2 ml-25 ">
+            <div className="pl-6 w-full md:w-1/3">
+                <h2 className="text-lg font-semibold mb-2 text-[#0E2B56] pb-2 ">
                     Logo
                 </h2>
-                <div className="w-[190px] h-[190px] bg-white/20  ml-25 border border-white/20 rounded-xl" >
+                <div className="w-[190px] h-[190px] bg-white/20  ml-0 border border-white/20 rounded-xl" >
                     <img
                         src={univerlogo}
                         alt="University Logo"

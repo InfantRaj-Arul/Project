@@ -7,7 +7,7 @@ import abouticon from "../assets/About/abouticon.png";
 import courseicon from "../assets/About/courseicon.png"
 
 const tabs = [
-    { name: "About", path: "/institute/about", icon: abouticon },
+    { name: "About", path: "/abt", icon: abouticon },
     { name: "Profile", path: "/institute/profile", icon: profileicon },
     { name: "Courses", path: "/institute/courses", icon: courseicon },
 ];
@@ -38,7 +38,7 @@ const AboutView: React.FC = () => {
             </div>
 
             {/* Contact Details Box */}
-            <div className="p-6 w-[705px] h-[200px] rounded-xl shadow-lg border border-white/20 flex flex-col md:flex-row items-start gap-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-md text-black mb-2">
+            <div className="p-6 w-[705px] h-[215px] rounded-xl shadow-lg border border-white/20 flex flex-col md:flex-row items-start gap-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-md text-black mb-2">
                 <div className="flex flex-col items-center min-w-[170px]">
                     <img src={univerlogo} alt="Logo" className="w-29 h-29 object-contain" />
                     <p className="mt-2 font-medium text-[#0B2447] text-center font-montserrat text-[14px]">
@@ -64,7 +64,7 @@ const AboutView: React.FC = () => {
             </div>
 
             {/* About Description */}
-            <div className=" text-left mt-0 w-372">
+            <div className=" text-left mt-0 w-269">
                 <h3 className="text-base font-bold text-white">About Us</h3>
                 <p className="text-sm leading-relaxed text-white">
                     Bharathidasan University established in February 1982, and was named after the great revolutionary Tamil Poet,

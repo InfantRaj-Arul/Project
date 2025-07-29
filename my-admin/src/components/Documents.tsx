@@ -13,7 +13,7 @@ const Documents: React.FC = () => {
       {documents.map((doc, idx) => (
         <div
           key={idx}
-          className="bg-white/10 backdrop-blur-md shadow-xl rounded-xl p-4 w-[418px] h-[100px] border border-white/20"
+          className="bg-white/10 backdrop-blur-md shadow-xl rounded-xl p-4 w-[250px] h-[100px] border border-white/20"
         >
           <div className="flex justify-between items-center text-sm font-semibold text-[#0E2B56]">
             <span>{doc.title}</span>

@@ -1,14 +1,14 @@
 import React from "react";
 import university from "../assets/About/university.png";
-import backgroundImage from "../assets/About/bg.png";
+// import backgroundImage from "../assets/About/bg.png";
 import bginsideImage from "../assets/About/bg1.png";
 import mernImg from "../assets/About/course.png";
 const CoursesView: React.FC = () => {
     return (
-        <div
-            className="min-h-screen bg-cover bg-no-repeat bg-center p-5"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
-        >
+        // <div
+        //     className="min-h-screen bg-cover bg-no-repeat bg-center p-5"
+        //     style={{ backgroundImage: `url(${backgroundImage})` }}
+        // >
             <div
                 className="min-h-[94vh] bg-cover bg-no-repeat bg-center pt-5 px-5 rounded-2xl overflow-hidden"
                 style={{ backgroundImage: `url(${bginsideImage})` }}
@@ -54,7 +54,7 @@ const CoursesView: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        // </div>
     );
 };
 
