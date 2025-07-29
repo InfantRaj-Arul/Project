@@ -1,10 +1,17 @@
 @import "tailwindcss";
 
 
-
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
 
 body {
   margin: 0;
@@ -16,6 +23,9 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+
 }
 
 

@@ -44,6 +44,27 @@
   color: #888;
 }
 
+/* body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./assets/bgimg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: sans-serif;
+} */
+ body {
+   
+  background-image: url('./assets/bgimg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 body {
   
   
@@ -73,6 +94,7 @@ body {
       /* global.css (or your main css file) */
       
       
+
 
 
 

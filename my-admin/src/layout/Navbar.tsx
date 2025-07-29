@@ -89,7 +89,7 @@ const MainLayout: React.FC = () => {
       </nav>
 
       {/* Main Content Area */}
-      <div className="pt-28 pb-8 px-8 min-h-screen">
+      <div className="pt-20 pb-8 px-8 min-h-screen">
         <Outlet />
       </div>
     </>
